@@ -24,7 +24,7 @@ a.example to run prod env image :- docker run --name dockerspring -p 8686:8686 -
 
 b.example to run dev env image :- docker run --name dockerspring -p 8585:8585 -e SPRING_PROFILES_ACTIVE=prod docker-with-springboot:0.0.1-snapshot
 
-9.docker stop <imageID>
+9.docker stop imageId
 
 
 
