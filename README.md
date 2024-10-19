@@ -4,7 +4,7 @@ This is a simple Spring Boot project to generate a Docker image, and it also dem
 
 1.mvn clean
 2.mvn install
-3.spring-boot:build-image -DskipTests / docker build -t <imageName>:version . - we can build in either way.
+3.spring-boot:build-image -DskipTests / docker build -t imageName:version . - we can build in either way.
 
 4.docker images -  Get all the images in your docker
 
@@ -18,7 +18,7 @@ a. First 8585 (Host Port): This is the port on the host (your local machine or s
 
 b. Second 8585 (Container Port): This is the port inside the Docker container where the Spring Boot application is running. In your Spring Boot application, you probably have the server configured to listen on port 8585 (via server.port=8585 in the application.properties or application.yml).
 
-8.docker run --name <container name> -p 8520:8520 -e SPRING_PROFILES_ACTIVE=<env name> <imagename>:<versionNumber>
+8.docker run --name containername -p 8520:8520 -e SPRING_PROFILES_ACTIVE=envname imagename:versionNumber - With these cmd we can name our container,envname,imagename and tag
 
 a.example to run prod env image :- docker run --name dockerspring -p 8686:8686 -e SPRING_PROFILES_ACTIVE=prod docker-with-springboot:0.0.1-snapshot
 
