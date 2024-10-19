@@ -15,6 +15,7 @@ This is a simple Spring Boot project to generate a Docker image, and it also dem
 7.docker run -p 8585:8585 docker-with-springboot:0.0.1-snapshot  - with port,name and tag
 
 a. First 8585 (Host Port): This is the port on the host (your local machine or server) where the application will be accessible. When you access http://localhost:8585, you're hitting this port.
+
 b. Second 8585 (Container Port): This is the port inside the Docker container where the Spring Boot application is running. In your Spring Boot application, you probably have the server configured to listen on port 8585 (via server.port=8585 in the application.properties or application.yml).
 
 8.docker run --name <container name> -p 8520:8520 -e SPRING_PROFILES_ACTIVE=<env name> <imagename>:<versionNumber>
